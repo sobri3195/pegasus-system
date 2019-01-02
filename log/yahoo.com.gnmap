@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Sep 24 23:10:08 2018 as: C:\Program Files (x86)\Nmap\nmap.exe -sV -A -oA log/yahoo.com yahoo.com
+Host: 98.137.246.8 (media-router-fp2.prod1.media.vip.gq1.yahoo.com)	Status: Up
+Host: 98.137.246.8 (media-router-fp2.prod1.media.vip.gq1.yahoo.com)	Ports: 53/open/tcp//domain//(unknown banner: Not disclosed)/, 80/open/tcp//http-proxy//Squid http proxy/, 443/open/tcp//ssl|http-proxy//Apache Traffic Server/	Ignored State: filtered (997)	Seq Index: 256	IP ID Seq: All zeros
+# Nmap done at Mon Sep 24 23:11:43 2018 -- 1 IP address (1 host up) scanned in 95.80 seconds

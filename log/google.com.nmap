@@ -1,0 +1,136 @@
+# Nmap 7.70 scan initiated Mon Sep 24 23:08:15 2018 as: C:\Program Files (x86)\Nmap\nmap.exe -sV -A -oA log/google.com google.com
+Nmap scan report for google.com (172.217.19.206)
+Host is up (0.027s latency).
+rDNS record for 172.217.19.206: ams16s31-in-f14.1e100.net
+Not shown: 997 filtered ports
+PORT    STATE SERVICE    VERSION
+53/tcp  open  domain     (unknown banner: Not disclosed)
+| dns-nsid: 
+|_  bind.version: Not disclosed
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    disclosed
+80/tcp  open  http-proxy Squid http proxy
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported: GET HEAD
+|_http-server-header: gws
+|_http-title: Did not follow redirect to http://www.google.com/
+443/tcp open  ssl/https  gws
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Mon, 24 Sep 2018 21:08:39 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: 1P_JAR=2018-09-24-21; expires=Wed, 24-Oct-2018 21:08:39 GMT; path=/; domain=.google.com
+|     Set-Cookie: NID=139=0bt67jSRm4Cwz0KZWaPypBMSIg-deivJ110lQQJTpOntKfNcmKDTBQVTiKnIfxpTKGAWeLW5wiOVw3MV-wOPxe5J6GjmOppBy_aZ-SjWTwjqfntNuHWmVKnba5m6P1Ka; expires=Tue, 26-Mar-2019 21:08:39 GMT; path=/; domain=.google.com; HttpOnly
+|     Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+|     Accept-Ranges: none
+|     Vary: Accept-Encoding
+|     <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="nl"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/brandin
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Allow: GET, HEAD
+|     Date: Mon, 24 Sep 2018 21:08:39 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Server: gws
+|     Content-Length: 1592
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 405 (Method Not Allowed)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{
+|_http-server-header: gws
+|_http-title: Did not follow redirect to https://www.google.com/
+| ssl-cert: Subject: commonName=*.google.com/organizationName=Google LLC/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:*.google.com, DNS:*.android.com, DNS:*.appengine.google.com, DNS:*.cloud.google.com, DNS:*.db833953.google.cn, DNS:*.g.co, DNS:*.gcp.gvt2.com, DNS:*.ggpht.cn, DNS:*.google-analytics.com, DNS:*.google.ca, DNS:*.google.cl, DNS:*.google.co.in, DNS:*.google.co.jp, DNS:*.google.co.uk, DNS:*.google.com.ar, DNS:*.google.com.au, DNS:*.google.com.br, DNS:*.google.com.co, DNS:*.google.com.mx, DNS:*.google.com.tr, DNS:*.google.com.vn, DNS:*.google.de, DNS:*.google.es, DNS:*.google.fr, DNS:*.google.hu, DNS:*.google.it, DNS:*.google.nl, DNS:*.google.pl, DNS:*.google.pt, DNS:*.googleadapis.com, DNS:*.googleapis.cn, DNS:*.googlecommerce.com, DNS:*.googlevideo.com, DNS:*.gstatic.cn, DNS:*.gstatic.com, DNS:*.gstaticcnapps.cn, DNS:*.gvt1.com, DNS:*.gvt2.com, DNS:*.metric.gstatic.com, DNS:*.urchin.com, DNS:*.url.google.com, DNS:*.youtube-nocookie.com, DNS:*.youtube.com, DNS:*.youtubeeducation.com, DNS:*.yt.be, DNS:*.ytimg.com, DNS:android.clients.google.com, DNS:android.com, DNS:developer.android.google.cn, DNS:developers.android.google.cn, DNS:g.co, DNS:ggpht.cn, DNS:goo.gl, DNS:google-analytics.com, DNS:google.com, DNS:googlecommerce.com, DNS:source.android.google.cn, DNS:urchin.com, DNS:www.goo.gl, DNS:youtu.be, DNS:youtube.com, DNS:youtubeeducation.com, DNS:yt.be
+| Not valid before: 2018-08-28T18:23:00
+|_Not valid after:  2018-11-20T18:23:00
+|_ssl-date: 2018-09-24T21:09:36+00:00; -1s from scanner time.
+| tls-alpn: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+| tls-nextprotoneg: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=9/24%Time=5BA95257%P=i686-pc-windows-windows%r(
+SF:DNSVersionBindReqTCP,48,"\0F\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07versi
+SF:on\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x0e\rNot\x20disc
+SF:losed\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=9/24%Time=5BA95258%P=i686-pc-windows-win
+SF:dows%r(GetRequest,106B,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2024\x
+SF:20Sep\x202018\x2021:08:39\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x2
+SF:0private,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-88
+SF:59-1\r\nP3P:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x2
+SF:0g\.co/p3phelp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Pr
+SF:otection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-
+SF:Cookie:\x201P_JAR=2018-09-24-21;\x20expires=Wed,\x2024-Oct-2018\x2021:0
+SF:8:39\x20GMT;\x20path=/;\x20domain=\.google\.com\r\nSet-Cookie:\x20NID=1
+SF:39=0bt67jSRm4Cwz0KZWaPypBMSIg-deivJ110lQQJTpOntKfNcmKDTBQVTiKnIfxpTKGAW
+SF:eLW5wiOVw3MV-wOPxe5J6GjmOppBy_aZ-SjWTwjqfntNuHWmVKnba5m6P1Ka;\x20expire
+SF:s=Tue,\x2026-Mar-2019\x2021:08:39\x20GMT;\x20path=/;\x20domain=\.google
+SF:\.com;\x20HttpOnly\r\nAlt-Svc:\x20quic=\":443\";\x20ma=2592000;\x20v=\"
+SF:44,43,39,35\"\r\nAccept-Ranges:\x20none\r\nVary:\x20Accept-Encoding\r\n
+SF:\r\n<!doctype\x20html><html\x20itemscope=\"\"\x20itemtype=\"http://sche
+SF:ma\.org/WebPage\"\x20lang=\"nl\"><head><meta\x20content=\"text/html;\x2
+SF:0charset=UTF-8\"\x20http-equiv=\"Content-Type\"><meta\x20content=\"/ima
+SF:ges/brandin")%r(HTTPOptions,74E,"HTTP/1\.0\x20405\x20Method\x20Not\x20A
+SF:llowed\r\nAllow:\x20GET,\x20HEAD\r\nDate:\x20Mon,\x2024\x20Sep\x202018\
+SF:x2021:08:39\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nS
+SF:erver:\x20gws\r\nContent-Length:\x201592\r\nX-XSS-Protection:\x201;\x20
+SF:mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nAlt-Svc:\x20quic=\":443
+SF:\";\x20ma=2592000;\x20v=\"44,43,39,35\"\r\n\r\n<!DOCTYPE\x20html>\n<htm
+SF:l\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=v
+SF:iewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20width=devi
+SF:ce-width\">\n\x20\x20<title>Error\x20405\x20\(Method\x20Not\x20Allowed\
+SF:)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}ht
+SF:ml,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#
+SF:222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height
+SF::180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\
+SF:.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;pad
+SF:ding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#
+SF:777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\
+SF:(max-width:772px\){body{");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.2 - 4.9 (93%), Linux 4.4 (93%), Linux 2.6.32 - 3.10 (92%), Linux 3.13 - 3.16 (90%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (88%), Linux 2.6.18 - 2.6.32 (87%), Crestron XPanel control system (87%), Linux 2.6.32 - 3.5 (87%), Linux 2.6.32 (86%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 13 hops
+
+Host script results:
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+1   3.00 ms  hotspot.s-bit.nl (172.30.3.254)
+2   4.00 ms  217-195-233-93.dsl.easynet.nl (217.195.233.93)
+3   6.00 ms  217-195-252-53.dsl.easynet.nl (217.195.252.53)
+4   8.00 ms  ae0.car01.kooams.nl.easynet.net (87.86.77.6)
+5   10.00 ms ae4.car02.sarams.nl.easynet.net (87.86.77.1)
+6   12.00 ms ae1.car01.sarams.nl.easynet.net (87.86.77.60)
+7   16.00 ms hotspot.s-bit.nl (195.134.205.109)
+8   18.00 ms ae11-100.cr4-ams2.ip4.gtt.net (77.67.94.181)
+9   21.00 ms xe-8-3-0.cr0-ams6.ip4.gtt.net (213.254.230.126)
+10  25.00 ms as15169.ams60.ip4.gtt.net (141.136.102.246)
+11  31.00 ms hotspot.s-bit.nl (108.170.241.193)
+12  28.00 ms hotspot.s-bit.nl (72.14.238.245)
+13  26.00 ms ams16s31-in-f14.1e100.net (172.217.19.206)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 24 23:09:48 2018 -- 1 IP address (1 host up) scanned in 92.56 seconds

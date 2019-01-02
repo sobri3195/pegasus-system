@@ -1,0 +1,143 @@
+# Nmap 7.70 scan initiated Mon Sep 24 23:16:09 2018 as: C:\Program Files (x86)\Nmap\nmap.exe -sV -A -oA log/packetstormsecurity.com packetstormsecurity.com
+Nmap scan report for packetstormsecurity.com (198.84.60.198)
+Host is up (0.020s latency).
+rDNS record for 198.84.60.198: 198-84-60-198.ash01.rokabear.com
+Not shown: 997 filtered ports
+PORT    STATE SERVICE    VERSION
+53/tcp  open  domain     (unknown banner: Not disclosed)
+| dns-nsid: 
+|_  bind.version: Not disclosed
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    disclosed
+80/tcp  open  http-proxy Squid http proxy
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: PacketServer
+|_http-title: Did not follow redirect to https://packetstormsecurity.com/
+443/tcp open  ssl/https  PacketServer
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Mon, 24 Sep 2018 21:16:51 GMT
+|     Content-Type: text/html; charset=iso-8859-1
+|     Content-Length: 269
+|     Connection: close
+|     Location: https://packetstormsecurity.com/nice%20ports,/Trinity.txt.bak
+|     Vary: Accept-Encoding
+|     Server: PacketServer
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=3600
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://packetstormsecurity.com/nice%20ports,/Trinity.txt.bak">here</a>.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Mon, 24 Sep 2018 21:16:50 GMT
+|     Content-Type: text/html; charset=iso-8859-1
+|     Content-Length: 240
+|     Connection: close
+|     Location: https://packetstormsecurity.com/
+|     Vary: Accept-Encoding
+|     Server: PacketServer
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=3600
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://packetstormsecurity.com/">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 501 Method Not Implemented
+|     Date: Mon, 24 Sep 2018 21:16:51 GMT
+|     Content-Type: text/html; charset=iso-8859-1
+|     Content-Length: 209
+|     Connection: close
+|     Allow: 
+|     Vary: Accept-Encoding
+|     Server: PacketServer
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>501 Method Not Implemented</title>
+|     </head><body>
+|     <h1>Method Not Implemented</h1>
+|     <p>OPTIONS to / not supported.<br />
+|     </p>
+|_    </body></html>
+| http-methods: 
+|_  Potentially risky methods: 
+| http-robots.txt: 11 disallowed entries 
+| /account/ /error/ /img/ /js/ /css/ /mirrors/ /search/ 
+|_/news/favorite/ /files/favorite/ /videos/favorite/ /*?*
+|_http-server-header: PacketServer
+|_http-title: Packet Storm
+| ssl-cert: Subject: commonName=packetstormsecurity.com
+| Subject Alternative Name: DNS:packetstormsecurity.com, DNS:www.packetstormsecurity.com, DNS:packetstatic.com, DNS:rss.packetstormsecurity.com, DNS:dl.packetstormsecurity.net
+| Not valid before: 2018-04-01T13:19:10
+|_Not valid after:  2019-05-31T18:04:40
+|_ssl-date: 2018-09-24T21:17:15+00:00; +16s from scanner time.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.70%I=7%D=9/24%Time=5BA95430%P=i686-pc-windows-windows%r(
+SF:DNSVersionBindReqTCP,48,"\0F\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07versi
+SF:on\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x0e\rNot\x20disc
+SF:losed\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=9/24%Time=5BA95432%P=i686-pc-windows-win
+SF:dows%r(GetRequest,26D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate
+SF::\x20Mon,\x2024\x20Sep\x202018\x2021:16:50\x20GMT\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=iso-8859-1\r\nContent-Length:\x20240\r\nConnection
+SF::\x20close\r\nLocation:\x20https://packetstormsecurity\.com/\r\nVary:\x
+SF:20Accept-Encoding\r\nServer:\x20PacketServer\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201
+SF:;\x20mode=block\r\nStrict-Transport-Security:\x20max-age=3600\r\n\r\n<!
+SF:DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<ht
+SF:ml><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><body>\n<
+SF:h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x20<a\
+SF:x20href=\"https://packetstormsecurity\.com/\">here</a>\.</p>\n</body></
+SF:html>\n")%r(HTTPOptions,1A8,"HTTP/1\.1\x20501\x20Method\x20Not\x20Imple
+SF:mented\r\nDate:\x20Mon,\x2024\x20Sep\x202018\x2021:16:51\x20GMT\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20209
+SF:\r\nConnection:\x20close\r\nAllow:\x20\r\nVary:\x20Accept-Encoding\r\nS
+SF:erver:\x20PacketServer\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF/
+SF:/DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>501\x20Method\x20Not\
+SF:x20Implemented</title>\n</head><body>\n<h1>Method\x20Not\x20Implemented
+SF:</h1>\n<p>OPTIONS\x20to\x20/\x20not\x20supported\.<br\x20/>\n</p>\n</bo
+SF:dy></html>\n")%r(FourOhFourRequest,2A7,"HTTP/1\.1\x20301\x20Moved\x20Pe
+SF:rmanently\r\nDate:\x20Mon,\x2024\x20Sep\x202018\x2021:16:51\x20GMT\r\nC
+SF:ontent-Type:\x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20
+SF:269\r\nConnection:\x20close\r\nLocation:\x20https://packetstormsecurity
+SF:\.com/nice%20ports,/Trinity\.txt\.bak\r\nVary:\x20Accept-Encoding\r\nSe
+SF:rver:\x20PacketServer\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-Ty
+SF:pe-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nStri
+SF:ct-Transport-Security:\x20max-age=3600\r\n\r\n<!DOCTYPE\x20HTML\x20PUBL
+SF:IC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x
+SF:20Moved\x20Permanently</title>\n</head><body>\n<h1>Moved\x20Permanently
+SF:</h1>\n<p>The\x20document\x20has\x20moved\x20<a\x20href=\"https://packe
+SF:tstormsecurity\.com/nice%20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n<
+SF:/body></html>\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.2 - 4.9 (93%), Linux 4.4 (93%), Linux 2.6.32 - 3.10 (92%), Linux 3.13 - 3.16 (92%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (88%), Linux 2.6.18 - 2.6.32 (87%), Crestron XPanel control system (87%), Linux 2.6.32 - 3.5 (87%), Linux 2.6.32 (86%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Host script results:
+|_clock-skew: mean: 15s, deviation: 0s, median: 15s
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   14.00 ms 198-84-60-198.ash01.rokabear.com (198.84.60.198)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 24 23:17:29 2018 -- 1 IP address (1 host up) scanned in 80.99 seconds

@@ -1,0 +1,51 @@
+# Nmap 7.70 scan initiated Mon Sep 24 23:10:08 2018 as: C:\Program Files (x86)\Nmap\nmap.exe -sV -A -oA log/yahoo.com yahoo.com
+Nmap scan report for yahoo.com (98.137.246.8)
+Host is up (0.041s latency).
+Other addresses for yahoo.com (not scanned): 72.30.35.10 98.138.219.231 98.138.219.232 98.137.246.7 72.30.35.9
+rDNS record for 98.137.246.8: media-router-fp2.prod1.media.vip.gq1.yahoo.com
+Not shown: 997 filtered ports
+PORT    STATE SERVICE        VERSION
+53/tcp  open  domain         (unknown banner: Not disclosed)
+| dns-nsid: 
+|_  bind.version: Not disclosed
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    disclosed
+80/tcp  open  http-proxy     Squid http proxy
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: ATS
+|_http-title: Did not follow redirect to https://www.yahoo.com/
+443/tcp open  ssl/http-proxy Apache Traffic Server
+|_http-server-header: ATS
+|_http-title: Did not follow redirect to https://www.yahoo.com/
+| ssl-cert: Subject: commonName=*.www.yahoo.com/organizationName=Yahoo Holdings, Inc./stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:*.www.yahoo.com, DNS:add.my.yahoo.com, DNS:*.amp.yimg.com, DNS:au.yahoo.com, DNS:be.yahoo.com, DNS:br.yahoo.com, DNS:ca.my.yahoo.com, DNS:ca.rogers.yahoo.com, DNS:ca.yahoo.com, DNS:ddl.fp.yahoo.com, DNS:de.yahoo.com, DNS:en-maktoob.yahoo.com, DNS:espanol.yahoo.com, DNS:es.yahoo.com, DNS:fr-be.yahoo.com, DNS:fr-ca.rogers.yahoo.com, DNS:frontier.yahoo.com, DNS:fr.yahoo.com, DNS:gr.yahoo.com, DNS:hk.yahoo.com, DNS:hsrd.yahoo.com, DNS:ideanetsetter.yahoo.com, DNS:id.yahoo.com, DNS:ie.yahoo.com, DNS:in.yahoo.com, DNS:it.yahoo.com, DNS:maktoob.yahoo.com, DNS:malaysia.yahoo.com, DNS:mbp.yimg.com, DNS:my.yahoo.com, DNS:nz.yahoo.com, DNS:ph.yahoo.com, DNS:qc.yahoo.com, DNS:ro.yahoo.com, DNS:se.yahoo.com, DNS:sg.yahoo.com, DNS:tw.yahoo.com, DNS:uk.yahoo.com, DNS:us.yahoo.com, DNS:verizon.yahoo.com, DNS:vn.yahoo.com, DNS:www.yahoo.com, DNS:yahoo.com, DNS:za.yahoo.com
+| Not valid before: 2018-08-13T00:00:00
+|_Not valid after:  2019-02-14T12:00:00
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   h2
+|_  http/1.1
+| tls-nextprotoneg: 
+|   h2
+|   http/1.1
+|_  http/1.0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.70%I=7%D=9/24%Time=5BA952D4%P=i686-pc-windows-windows%r(
+SF:DNSVersionBindReqTCP,48,"\0F\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07versi
+SF:on\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x0e\rNot\x20disc
+SF:losed\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.2 - 4.9 (92%), Linux 4.4 (92%), Linux 2.6.32 - 3.10 (91%), Linux 3.13 - 3.16 (89%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (87%), Linux 2.6.18 - 2.6.32 (87%), Linux 2.6.32 - 3.5 (86%), Crestron XPanel control system (86%), Linux 2.6.32 (86%), Epson Stylus Pro 400 printer (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: Host: media-router-fp1016.prod.media.gq1.yahoo.com
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   6.00 ms media-router-fp2.prod1.media.vip.gq1.yahoo.com (98.137.246.8)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 24 23:11:43 2018 -- 1 IP address (1 host up) scanned in 95.80 seconds

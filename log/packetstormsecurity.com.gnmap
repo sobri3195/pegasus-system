@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Sep 24 23:16:09 2018 as: C:\Program Files (x86)\Nmap\nmap.exe -sV -A -oA log/packetstormsecurity.com packetstormsecurity.com
+Host: 198.84.60.198 (198-84-60-198.ash01.rokabear.com)	Status: Up
+Host: 198.84.60.198 (198-84-60-198.ash01.rokabear.com)	Ports: 53/open/tcp//domain//(unknown banner: Not disclosed)/, 80/open/tcp//http-proxy//Squid http proxy/, 443/open/tcp//ssl|https//PacketServer/	Ignored State: filtered (997)	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Mon Sep 24 23:17:29 2018 -- 1 IP address (1 host up) scanned in 80.99 seconds
